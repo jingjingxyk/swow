@@ -802,7 +802,7 @@ EOF
           if test x"${ac_cv_cc_attribute_weak}" != x"yes"; then
             PHP_EVAL_LIBLINE($POSTGRESQL_LIBS, SWOW_SHARED_LIBADD)
           fi
-          SWOW_CAT_INCLUDES="$SWOW_CAT_INCLUDES $POSTGRESQL_INCL"
+          SWOW_CAT_INCLUDES="$SWOW_CAT_INCLUDES $POSTGRESQL_CFLAGS"
           SWOW_INCLUDES="$SWOW_INCLUDES -I$pdo_cv_inc_path"
           SWOW_ADD_SOURCES(deps/libcat/src, cat_pq.c, SWOW_CAT_INCLUDES, SWOW_CAT_CFLAGS)
           SWOW_ADD_SOURCES(src, swow_pgsql_driver.c swow_pgsql_statement.c swow_pgsql_version.c, SWOW_INCLUDES, SWOW_CFLAGS)
